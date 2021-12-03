@@ -28,8 +28,9 @@ async function loginForm(event) {
 		if (response.ok) {
 			console.log("ok");
 			document.location.replace("/");
-		} else document.querySelector("#errMsg").innerHTML =
-		"Incorrect Password Or Email ";
+		} else alert(response.status);
+		// document.querySelector("#errMsg").innerHTML =
+		// "Incorrect Password Or Email ";
 	}
 }
 
@@ -94,7 +95,7 @@ async function signupFormHandler(event) {
 	  });
   
 	  if (response.ok) {
-		document.location.replace('/dashboard');
+		document.location.replace('/');
 	  } else {
 		alert(response.statusText);
 	  }
