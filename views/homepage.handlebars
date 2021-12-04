@@ -9,11 +9,12 @@
                     <div class="post-preview">
                         {{#each blogs}}
                         <a href="post.html">
-                            <h2 class="post-title">{{title}}</h2>
-                            <h3 class="post-subtitle">{{blog_detalis}}</h3>
+                            <h2 class="post-title">{{title}}</h2> 
                         </a>
+                          {{blog_details}}
+                       
                         <p class="post-meta">
-                            {{!-- Posted by {{user.username}} --}}
+                            Posted by {{user.username}}
                            
                             on  {{created_at}}
                         </p>

@@ -49,9 +49,9 @@ async function logout() {
 		alert(response.statusText);
 	}
 };
-
-document.querySelector("#login").addEventListener("click", loginForm);
-
+if (document.getElementById("login")) {
+document.getElementById("login").addEventListener("click", loginForm);
+}
 if (document.getElementById("logout")) {
 	document.getElementById("logout").addEventListener("click", logout);
 
@@ -104,4 +104,3 @@ async function signupFormHandler(event) {
   
  
   
-  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
