@@ -23,11 +23,12 @@
                     {{/each}}
 
 
-                    <p><a href="singlePost/{{id}}"> Add comment</a></p>
+                   {{#if loggedIn}} <p><a href="singlePost/{{id}}"> Add comment</a></p>{{/if}}
 
                     {{#unless loggedIn}} <p><a href="/login">Please sign in to Add comment</a></p>{{/unless}}
 
                     <hr class="my-4" />
+                    
                     {{/each}}
                 </div>
 
