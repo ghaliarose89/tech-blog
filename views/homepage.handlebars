@@ -1,36 +1,36 @@
+<main>
+    <!-- Main Content-->
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <!-- Post preview-->
+                <div class="post-preview">
+                    {{#each blogs}}
 
-    
-    <main>
-        <!-- Main Content-->
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        {{#each blogs}}
-                        
-                            <h2 class="post-title">{{title}}</h2> 
-                        </a>
-                          {{blog_details}}
-                       
-                        <p class="post-meta">
-                            Posted by {{user.username}}
-                           
-                            on  {{created_at}}
-                        </p>
-                        {{#if blogs.comments.length}}
-                        Comments {{blogs.comments.comment_text}}{{/if}}
-                        
-                        
-                        <p><a href="singlePost/{{id}}"> Add comment</a></p>
-                       
-                        {{#unless loggedIn}}  <p><a href="/login">Please sign in to Add comment</a></p>{{/unless}}
-                      
-                        <hr class="my-4" />
-                        {{/each}}
-                    </div>
-                    
-                    
-       
-    </main>  <!-- Bootstrap core JS-->
-     
+                    <h2 class="post-title">{{title}}</h2>
+
+                    {{blog_details}}
+
+                    <p class="post-meta">
+                        Posted by {{user.username}}
+
+                        on {{created_at}}
+                    </p>
+
+                    Comments:
+                    {{#each comments}}
+                    <li> {{comment_text}} </li>
+                    {{/each}}
+
+
+                    <p><a href="singlePost/{{id}}"> Add comment</a></p>
+
+                    {{#unless loggedIn}} <p><a href="/login">Please sign in to Add comment</a></p>{{/unless}}
+
+                    <hr class="my-4" />
+                    {{/each}}
+                </div>
+
+
+
+</main> <!-- Bootstrap core JS-->

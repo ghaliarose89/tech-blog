@@ -16,11 +16,11 @@
           <p class="card-text h6">By {{blog.user.username}} On {{ blog.created_at}}</p>
           {{!-- <div class="card-footer"></div> --}}
         </div>
-        {{#if blog.comment.length}}
+        {{#if blog.comments.length}}
         <br>
         <h5 class=" bg-transparent border-success h5" style="color:#DCAE1D">Comments</h5>
         <div>
-        {{#each blog.comment}}
+        {{#each blog.comments}}
         <div>
           <li>
             {{comment_text}} by {{user.username}}

@@ -45,7 +45,7 @@
 
   {{!-- If user has posts --}}
   {{#if blogs.length}}
-
+ 
   <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
     <div class="lh-1">
       <h1 class="h5 mb-0 text-center lh-1 event-mgr-header">Your Posts</h1>
@@ -74,8 +74,8 @@
               onclick="editPosttBtn(this)" style="margin-left: 20px;">Edit post</button> <br><br>
                <button type="submit" class="btn btn-primary addCommentBtn" style="margin-left: 15px;" data-post-id="{{id}}"
               onclick="addCommentBtn(this)"> Add
-              comment</button>
-            {{!-- <button type="button" class="btn btn-primary deletePostBtn">Delete post</button> --}}
+              comment</button> <br><br>
+            <button type="button" class="btn btn-primary deletePostBtn" style="margin-left: 15px;">Delete post</button>
           </div>
         </div>
       </div>

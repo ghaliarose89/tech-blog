@@ -26,6 +26,21 @@ async function newFormHandler(event) {
 
 
 
+async function deleteFormHandler(event) {
+  event.preventDefault();
+  const post_id = document.querySelector('#post_id').value;
+  const response = await fetch(`/api/blogs/${post_id}`, {
+    method: 'DELETE'
+  });
+
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert(response.statusText);
+  }
+}
+
+
 async function addCommentBtn(thisBtn) {
   const post_id = thisBtn.getAttribute("data-post-id")//document.querySelector('#post_id').value;
   document.location.replace(`/singlePost/${post_id}`);
@@ -37,4 +52,4 @@ async function editPosttBtn(thisBtn) {
 };
 
 
-
+document.querySelector('.deletePostBtn').addEventListener('click',deleteFormHandler)
