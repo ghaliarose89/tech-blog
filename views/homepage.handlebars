@@ -4,9 +4,9 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <!-- Post preview-->
-                {{#if loggedIn}}
-                <div class="post-preview">
 
+                <div class="post-preview">
+                    {{#if loggedIn}}
                     {{#each blogs}}
 
                     <a href="singlePost/{{id}}">
@@ -29,14 +29,14 @@
                     <p><a href="singlePost/{{id}}"> Add comment</a></p>
 
                     <hr class="my-4" />
-
+                    {{/each}}
+                    {{/if}}
                 </div>
-                {{/each}}
-                {{/if}}
 
-                {{#unless loggedIn}}
+
+
                 <div class="post-preview">
-
+                    {{#unless loggedIn}}
                     {{#each blogs}}
 
                     <h2 class="post-title">{{title}}</h2>
@@ -47,13 +47,14 @@
                         on {{format_date created_at}}
                     </p>
 
-                    <p><a href="/login">Please sign in see blog details and comments</a></p>
+                    
 
                     <hr class="my-4" />
-
+                    {{/each}}
+                    <p><a href="/login">Please sign in see blog details and comments</a></p>
+                    {{/unless}}
                 </div>
-                {{/each}}
-                {{/unless}}
+
 
 
             </div>
