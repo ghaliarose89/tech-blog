@@ -28,7 +28,7 @@ async function newFormHandler(event) {
 
 async function addCommentBtn(thisBtn) {
   const post_id = thisBtn.getAttribute("data-post-id")//document.querySelector('#post_id').value;
-  document.location.replace(`/post/${post_id}`);
+  document.location.replace(`/singlePost/${post_id}`);
 };
 
 async function editPosttBtn(thisBtn) {
