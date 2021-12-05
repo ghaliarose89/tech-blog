@@ -4,6 +4,7 @@ async function newFormHandler(event) {
   const title = document.querySelector('input[name="post-title"]').value;
   const blog_details = document.querySelector('#post-url').value;
   const user_id = document.querySelector('#user_id').value;
+  //creating the post
   const response = await fetch(`/api/blogs`, {
     method: 'POST',
     body: JSON.stringify({
@@ -25,7 +26,7 @@ async function newFormHandler(event) {
 }
 
 
-
+//deleting post
 async function deleteFormHandler(event) {
   event.preventDefault();
   const post_id = document.querySelector('#post_id').value;
@@ -52,6 +53,6 @@ async function editPosttBtn(thisBtn) {
 };
 
 
-if (document.querySelector('.deletePostBtn')){
-  document.querySelector('.deletePostBtn').addEventListener('click',deleteFormHandler)
-}
+// if (document.querySelector('.deletePostBtn')){
+//   document.querySelector('.deletePostBtn').addEventListener('click',deleteFormHandler)
+// }

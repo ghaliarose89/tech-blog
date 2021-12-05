@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { User, Blog, Comment } = require("../models");
-
+//get all blogs in landing page
 router.get('/', (req, res) => {
   console.log('======================');
   Blog.findAll({
@@ -54,7 +54,7 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-
+// when the user click on Dashboard
 router.get("/createPost", (req, res) => {
 	Blog.findAll({
 		where: {
@@ -103,7 +103,7 @@ router.get("/createPost", (req, res) => {
 			res.status(500).json(err);
 		});
 });
-
+// when the user click on Edit
 router.get("/editPost/:id", (req, res) => {
 	Blog.findOne({
 		where: {
