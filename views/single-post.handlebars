@@ -13,7 +13,7 @@
              
             {{blog.title}}</h4>
           <p class="card-text" style="font-weight:bold"> <br>{{blog.blog_details}}</p>
-          <p class="card-text h6">By {{blog.user.username}} On {{ blog.created_at}}</p>
+          <p class="card-text h6">By {{blog.user.username}} On {{ format_date blog.created_at}}</p>
           {{!-- <div class="card-footer"></div> --}}
         </div>
         {{#if blog.comments.length}}

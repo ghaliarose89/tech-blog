@@ -4,34 +4,61 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <!-- Post preview-->
+                {{#if loggedIn}}
                 <div class="post-preview">
+
                     {{#each blogs}}
 
-                    <h2 class="post-title">{{title}}</h2>
+                    <a href="singlePost/{{id}}">
+                        <h2 class="post-title">{{title}}</h2>
+                    </a>
 
                     {{blog_details}}
 
                     <p class="post-meta">
                         Posted by {{user.username}}
 
-                        on {{created_at}}
+                        on {{format_date created_at}}
                     </p>
-
-                    Comments:
                     {{#each comments}}
-                    <li> {{comment_text}} </li>
+                    Comments:
+
+                    <li> {{comment_text}} By {{user.username}} On {{ format_date createdAt}}</li>
                     {{/each}}
 
-
-                   
-                    {{/each}}
-                    {{#if loggedIn}} <p><a href="singlePost/{{id}}"> Add comment</a></p>
-
-                    {{else}} <p><a href="/login">Please sign in to Add comment</a></p>
+                    <p><a href="singlePost/{{id}}"> Add comment</a></p>
 
                     <hr class="my-4" />
-                    {{/if}}
+
                 </div>
+                {{/each}}
+                {{/if}}
+
+                {{#unless loggedIn}}
+                <div class="post-preview">
+
+                    {{#each blogs}}
+
+                    <h2 class="post-title">{{title}}</h2>
+
+                    <p class="post-meta">
+                        Posted by {{user.username}}
+
+                        on {{format_date created_at}}
+                    </p>
+
+                    <p><a href="/login">Please sign in see blog details and comments</a></p>
+
+                    <hr class="my-4" />
+
+                </div>
+                {{/each}}
+                {{/unless}}
+
+
+            </div>
+        </div>
+    </div>
 
 
 
