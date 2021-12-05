@@ -34,7 +34,7 @@ async function deleteFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/createPost');
   } else {
     alert(response.statusText);
   }
@@ -52,4 +52,6 @@ async function editPosttBtn(thisBtn) {
 };
 
 
-document.querySelector('.deletePostBtn').addEventListener('click',deleteFormHandler)
+if (document.querySelector('.deletePostBtn')){
+  document.querySelector('.deletePostBtn').addEventListener('click',deleteFormHandler)
+}
