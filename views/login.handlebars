@@ -1,37 +1,50 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password" />
-  </div>
-  <div>
-    <button type="submit" id='login' onclick="loginForm(event)">login</button>
-  </div>
-</form>
-<div id='errMsg' style="font-weight:bold;color:red"></div>
-							<p class="login-card-footer-text">Don't have an account?
-								Register Below</a>
-							</p>
-<form class="signup-form" class= type='hidden'>
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit" onclick=" signupFormHandler(event)">signup</button>
-  </div>
-</form>
-<div id='errMsg2' style="font-weight:bold;color:red"></div>
+<section class="py-3 vh-100" id="features">
+  <div class="container px-5 my-5 ">
+    <div class="row gx-5">
+      <div class="card-body">
+      <form class="login-form">
+        <div >
+         <h1 class="h5 mb-2  lh-1 text-left event-mgr-header">email:</h1>
+          <input type="text" id="email" />
+        </div>
+        <div>
+          <br>
+           <h1 class="h5 mb-2  lh-1 text-left event-mgr-header">password:</h1>
+          <input type="password" id="password" />
+        </div>
+        <div>
+          <br>
+          <button type="submit" id='login' class="btn btn-primary btn-lg" onclick="loginForm(event)">login</button>
+        </div>
+      </form>
+      <div id='errMsg' style="font-weight:bold;color:red"></div>
+      <p class="login-card-footer-text" style="color:burlywood">Don't have an account?
+        Register Below</a>
+      </p>
+      <form class="signup-form" class=type='hidden'>
+        <div>
+          <h1 class="h5 mb-2  lh-1 text-left event-mgr-header">username:</h1>
+          <input type="text" id="username-signup" />
+        </div>
+        <div>
+           <br>
+          <h1 class="h5 mb-2  lh-1 text-left event-mgr-header">email:</h1>
+          <input type="text" id="email-signup" />
+        </div>
+        <div>
+           <br>
+         <h1 class="h5 mb-2  lh-1 text-left event-mgr-header">password:</h1>
+          <input type="password" id="password-signup" />
+        </div>
+        <div>
+           <br>
+          <button type="submit" onclick=" signupFormHandler(event)" class="btn btn-primary btn-lg">signup</button>
+        </div>
+      </form>
+      <div id='errMsg2' style="font-weight:bold;color:red"></div>
 
-<script src="/javascript/login.js"></script>
+</div>
+</div>
+</div>
+</section>
+      <script src="/javascript/login.js"></script>
