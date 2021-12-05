@@ -37,6 +37,7 @@
 
                 <div class="post-preview">
                     {{#unless loggedIn}}
+                     <p><a href="/login">Please sign in see blog details and comments</a></p>
                     {{#each blogs}}
 
                     <h2 class="post-title">{{title}}</h2>
@@ -51,7 +52,7 @@
 
                     <hr class="my-4" />
                     {{/each}}
-                    <p><a href="/login">Please sign in see blog details and comments</a></p>
+                   
                     {{/unless}}
                 </div>
 
